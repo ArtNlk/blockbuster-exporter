@@ -56,10 +56,10 @@ if __name__ == "__main__":
 		exit(0)
 	input_path = sys.argv[1]
 	output_path = sys.argv[2]
-	scale = int(sys.argv[3])
-	oX = int(sys.argv[4])
-	oY = int(sys.argv[5])
-	oZ = int(sys.argv[6])
+	scale = float(sys.argv[3])
+	oX = float(sys.argv[4])
+	oY = float(sys.argv[5])
+	oZ = float(sys.argv[6])
 	
 	print("Exporting from {} to {}\nScale:{}\nOrigin:\n X:{}\n Y:{}\n Z:{}\n".format(input_path,output_path,scale,oX,oY,oZ))
 	
