@@ -1,7 +1,7 @@
 import os
 import tkinter as tk
 from tkinter import filedialog as fd
-import pygubu
+#import pygubu
 
 import nbtlib
 import sys
