@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="tk.Toplevel" id="mainWindow">
+    <property name="geometry">1024x576</property>
+    <property name="height">576</property>
+    <property name="maxsize">1024|576</property>
+    <property name="minsize">1024|576</property>
+    <property name="title" translatable="yes">Blockbuster exporter</property>
+    <property name="width">1024</property>
+    <child>
+      <object class="tk.Frame" id="mainFrame">
+        <property name="height">576</property>
+        <property name="width">1024</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="bbPathLabel">
+            <property name="text" translatable="yes">Blockbuster file path:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="entry2">
+            <property name="relief">sunken</property>
+            <property name="textvariable">string:bb_file_path</property>
+            <property name="width">50</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="bbPathOpenBtn">
+            <property name="command" type="command" cbtype="simple">openBBFilePicker</property>
+            <property name="text" translatable="yes">Open...</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="outputPathLabel">
+            <property name="justify">left</property>
+            <property name="text" translatable="yes">Output file path:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="entry3">
+            <property name="textvariable">string:output_file_path</property>
+            <property name="width">50</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="outputPathOpenBtn">
+            <property name="command" type="command" cbtype="simple">openOutputFilePicker</property>
+            <property name="text" translatable="yes">Choose...</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="scaleLabel">
+            <property name="compound">top</property>
+            <property name="font">TkTextFont</property>
+            <property name="text" translatable="yes">Output scale:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="spinbox1">
+            <property name="from_">-1000000</property>
+            <property name="increment">1</property>
+            <property name="textvariable">double:output_scale</property>
+            <property name="to">1000000</property>
+            <property name="width">7</property>
+            <property name="wrap">false</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="originXLabel">
+            <property name="text" translatable="yes">Origin X:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="label8">
+            <property name="text" translatable="yes">Origin Y:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="label9">
+            <property name="text" translatable="yes">Origin Z:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">5</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="originXspinbox">
+            <property name="from_">-1000000</property>
+            <property name="justify">left</property>
+            <property name="textvariable">double:originX</property>
+            <property name="to">1000000</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="originYspinbox">
+            <property name="from_">-1000000</property>
+            <property name="textvariable">double:originY</property>
+            <property name="to">1000000</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="originZspinbox">
+            <property name="from_">-1000000</property>
+            <property name="textvariable">double:originZ</property>
+            <property name="to">1000000</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">5</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="processButton">
+            <property name="command" type="command" cbtype="simple">processFile</property>
+            <property name="text" translatable="yes">Process</property>
+            <property name="width">40</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">6</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
