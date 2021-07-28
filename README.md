@@ -15,12 +15,12 @@ bbexp.py bbRecordFilePath pythonOutputFilePath outputScale originX originY origi
  - **originZ** - Starting point Z in BU. Keyframed camera path would start from here
 
 #### Required packages
-nbtlib, tkinter
+nbtlib
 
 ## bbexp_gui
 GUI version of BB exporter.
 #### Required packages
-nbtlib
+nbtlib, tkinter
 
 ## Usage
 1. Install blockbuster mod
