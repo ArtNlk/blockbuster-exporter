@@ -7,5 +7,10 @@ CLI version of BB exporter.
 ```
 bbexp.py bbRecordFilePath pythonOutputFilePath outputScale originX originY originZ
 ```
+#### Required packages
+nbtlib, tkinter
+
 ## bbexp_gui
 GUI version of BB exporter.
+#### Required packages
+nbtlib
