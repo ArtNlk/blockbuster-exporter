@@ -9,7 +9,7 @@ bbexp.py bbRecordFilePath pythonOutputFilePath outputScale originX originY origi
 ```
  - **bbRecordFilePath** - input recording file path
  - **pythonOutputFilePath** - output python script path
- - **outputScale** - Scale multiplier: moving by 1 block in minecraft would equate moving outputScale BU in blender
+ - **outputScale** - Scale multiplier: moving by 1 block in minecraft would equate moving outputScale BU in blender, i.e. 1 block is **outputScale** BU
  - **originX** - Starting point X in BU. Keyframed camera path would start from here
  - **originY** - Starting point Y in BU. Keyframed camera path would start from here
  - **originZ** - Starting point Z in BU. Keyframed camera path would start from here
